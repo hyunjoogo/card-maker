@@ -1,5 +1,6 @@
-import styles from './Login.module.css'
-const Login = ({authService}) => {
+import styles from './login.module.css';
+
+const Login = ({authService, onLogout}) => {
   const onLogin = event => {
     authService.login(event.target.textContent).then(console.log);
   }
@@ -7,6 +8,7 @@ const Login = ({authService}) => {
     <>
       <div className={styles.wrapper}>
         <div className={styles.title}>
+          {onLogout && <button className={styles.logout}>Logout</button>}
           <img alt="logo" src="images/logo.png"/>
           <h1>Business Card Maker</h1>
         </div>

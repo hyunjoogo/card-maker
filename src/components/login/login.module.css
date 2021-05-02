@@ -1,4 +1,4 @@
-@value from '../common/colors.css';
+@value makerOrange, makerWhite from '/src/common/colors.css';
 
 .wrapper {
   width: 50%;
@@ -23,7 +23,22 @@
   align-items: center;
   padding-top: 40px;
   color: #fff;
+  position: relative;
+}
 
+.logout {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  background: none;
+  outline: 0;
+  border: 0;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.logout:hover{
+  font-weight: 900;
 }
 
 .title img {
@@ -38,7 +53,6 @@
   width: 100%;
   text-align: center;
   margin: 20px 0 30px;
-
 }
 
 .method {
@@ -52,6 +66,10 @@
   font-size: 20px;
   cursor: pointer;
   margin: 10px auto;
+}
+
+.method:hover {
+  box-shadow: rgb(232, 73, 10) 0px 0px 0px 1px;
 }
 
 /*.method {*/
@@ -78,7 +96,7 @@
 }
 
 
-@media screen and (max-width:767px){
+@media screen and (max-width: 767px) {
 
   .wrapper {
     width: 100%;

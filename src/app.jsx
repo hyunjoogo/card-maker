@@ -2,7 +2,7 @@ import React from 'react';
 import './app.css';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import QueryForm from "./components/QueryForm";
-import Login from "./components/Login";
+import Login from "./components/login/Login";
 
 function App({authService}) {
   return (
