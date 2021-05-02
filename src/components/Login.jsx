@@ -1,5 +1,8 @@
 import styles from './Login.module.css'
-const Login = () => {
+const Login = ({authService}) => {
+  const onLogin = event => {
+    authService.login(event.target.textContent).then(console.log);
+  }
   return (
     <>
       <div className={styles.wrapper}>
@@ -10,8 +13,8 @@ const Login = () => {
         <div className={styles.loginbox}>
           <h1 className={styles.logintitle}>Login</h1>
           <div className={styles.methodbox}>
-            <span className={styles.method}>Google</span>
-            <span className={styles.method}>Github</span>
+            <span className={styles.method} onClick={onLogin}>Google</span>
+            <span className={styles.method} onClick={onLogin}>Github</span>
           </div>
         </div>
         <div className={styles.footer}>
