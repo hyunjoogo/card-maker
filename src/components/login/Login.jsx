@@ -1,18 +1,17 @@
 import styles from './login.module.css';
+import {useHistory} from "react-router-dom";
 
 const Login = ({authService, onLogout}) => {
+  const history = useHistory();
+  const goToMaker = (userId) => {
+    history.push({
+      pathname : '/maker',
+      state: {id: userId},
+    })
+  }
   const onLogin = event => {
     authService.login(event.target.textContent)
-      .then((result) => {
-        const credential = result.credential;
-        const token = credential.accessToken;
-        const user = result.user;
-        console.log(credential,user,token)
-      }).catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      const credential = error.credential;
-    });
+      .then((data) => goToMaker(data.user.uid))
   }
   return (
     <>
