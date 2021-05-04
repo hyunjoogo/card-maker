@@ -14,10 +14,11 @@ function Routers({authService}) {
       >
         <section className="route-section">
           <Switch location={location}>
-            <Route exact path="/" />
+            <Route exact path="/">
               <Login authService={authService}/>
+            </Route>
             <Route path="/maker">
-              <Maker />
+              <Maker/>
             </Route>
           </Switch>
         </section>
