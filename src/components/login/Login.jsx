@@ -2,7 +2,17 @@ import styles from './login.module.css';
 
 const Login = ({authService, onLogout}) => {
   const onLogin = event => {
-    authService.login(event.target.textContent).then(console.log);
+    authService.login(event.target.textContent)
+      .then((result) => {
+        const credential = result.credential;
+        const token = credential.accessToken;
+        const user = result.user;
+        console.log(credential,user,token)
+      }).catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      const credential = error.credential;
+    });
   }
   return (
     <>

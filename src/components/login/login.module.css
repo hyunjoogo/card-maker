@@ -1,7 +1,8 @@
 @value makerOrange, makerWhite from '/src/common/colors.css';
 
 .wrapper {
-  width: 50%;
+  max-width: 50%;
+  width: 650px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,7 +100,7 @@
 @media screen and (max-width: 767px) {
 
   .wrapper {
-    width: 100%;
+    max-width: 80%;
   }
 
   .title {
