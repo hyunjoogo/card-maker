@@ -7,15 +7,15 @@ const Hello = (props) => {
   const {count} = queryString.parse(location.search);
 
   const goHome = () => {
-    history.push("/")
+    history.goBack("/");
   }
 
 
   return (
-    <>
+    <div >
       <h1>Hello {count}</h1>
       <button onClick={goHome}>Go Home</button>
-    </>
+    </div>
   )
 };
 
