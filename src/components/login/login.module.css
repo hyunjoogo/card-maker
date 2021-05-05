@@ -1,8 +1,7 @@
 @value makerOrange, makerWhite from '/src/common/colors.css';
 
 .wrapper {
-  max-width: 50%;
-  width: 650px;
+  width: 30em;
   display: flex;
   flex-direction: column;
   align-items: center;

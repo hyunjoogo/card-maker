@@ -20,6 +20,9 @@ function Routers({authService}) {
             <Route path="/maker">
               <Maker authService={authService}/>
             </Route>
+            {/*<Route path="/maker">*/}
+            {/*  <Maker authService={authService}/>*/}
+            {/*</Route>*/}
           </Switch>
         </section>
       </CSSTransition>

@@ -24,7 +24,6 @@ const Login = ({authService, onLogout}) => {
     })
   });
   return (
-    <>
       <div className={styles.wrapper}>
         <Header onLogout={onLogout}/>
         <div className={styles.loginbox}>
@@ -36,7 +35,6 @@ const Login = ({authService, onLogout}) => {
         </div>
         <Footer/>
       </div>
-    </>
   )
 }
 
