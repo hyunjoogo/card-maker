@@ -1,4 +1,7 @@
 .editor {
   flex-basis: 50%;
   width: 100%;
+  text-align: center;
+  background-color: white;
+  border-right: 1px solid #626262;
 }

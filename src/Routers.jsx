@@ -5,12 +5,17 @@ import Maker from "./components/maker/maker";
 
 function Routers({authService}) {
   const location = useLocation();
+
+  const timeout = { enter: 800, exit: 400 };
+
   return (
     <TransitionGroup className="transition-group">
       <CSSTransition
         key={location.key}
-        timeout={300}
-        classNames="fade"
+        timeout={timeout}
+        classNames="pageSlider"
+        mountOnEnter={false}
+        unmountOnExit={true}
       >
         <section className="route-section">
           <Switch location={location}>
