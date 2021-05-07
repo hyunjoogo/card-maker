@@ -9,7 +9,6 @@ import {contents} from "../card-contents";
 
 const Maker = ({authService}) => {
   const [cards, setCards] = useState(contents);
-  const [mode, setMode] = useState(false);
 
   const history = useHistory()
   const onLogout = () => {
@@ -22,11 +21,17 @@ const Maker = ({authService}) => {
       }
     })
   })
+  // 카드 추가 함수
+  const addCard = (card) => {
+    const newCard = [...cards, card];
+    setCards(newCard);
+  }
+
   return (
     <section className={styles.maker}>
-      <Header onLogout={onLogout} mode={mode}/>
+      <Header onLogout={onLogout}/>
       <div className={styles.container}>
-        <Editor cards={cards}/>
+        <Editor cards={cards} addCard={addCard}/>
         <Preview cards={cards}/>
       </div>
       <Footer/>
