@@ -1,0 +1,49 @@
+@value makerGrey, makerOrange, makerShadow from '../../common/colors.css';
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: makerShadow 0px 3px 6px 0px;
+  transition: all 0.2s ease 0s;
+  border-top: 1px solid makerGrey;
+  border-left: 1px solid makerGrey;
+  margin-bottom: 1em;
+}
+
+.input,
+.textarea,
+.select,
+.button,
+.fileInput {
+  font-size: 0.8rem;
+  width: 100%;
+  border: 0;
+  padding: 0.5em;
+  border-bottom: 1px solid makerGrey;
+  border-right: 1px solid makerGrey;
+}
+
+.input,
+.select {
+  flex: 1 1 30%
+}
+
+.fileInput {
+  padding: 0;
+  flex: 1 1 50%;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus,
+.button:focus {
+  outline: 0;
+  background-color: makerOrange;
+  color: white;
+  transition: all 300ms ease-in-out;
+}
+
+.textarea {
+  flex-basis: 100%;
+}

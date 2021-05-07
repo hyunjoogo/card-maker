@@ -1,0 +1,39 @@
+/* 뒷 배경 */
+.box {
+  transform: translate(10em, 10em);
+  position:relative;
+  width: 90px;
+  height: 40px;
+  border: 1px solid white;
+  z-index:1;
+  border-radius: 50px;
+  background-color: #e8490a;
+}
+/* */
+.box .input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* 원 */
+.span {
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  width: 35px;
+  height: 35px;
+  z-index: 2;
+  border-radius: 50px;
+  transition: all 0.4s;
+  background-color: black;
+  cursor: pointer;
+}
+
+/* 움직이는 범위 + 원 색상 변경*/
+.box .input:checked ~ .span {
+  transform: translateX(145%) scale(1);
+  background-color: white;
+}
+

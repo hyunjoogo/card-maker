@@ -1,0 +1,18 @@
+@value makerWhite, makerOrange from '../../common/colors.css';
+
+.button {
+  background-color: makerOrange;
+  color: makerWhite;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5em;
+  transition: all 0.4s ease 0s;
+  border: none;
+  /*border-radius: 8px;*/
+  flex: 1 1 50%;
+}
+
+.button:hover {
+  box-shadow: makerOrange 0px 0px 0px 1px;
+}

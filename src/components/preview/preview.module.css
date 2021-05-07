@@ -1,6 +1,27 @@
+@value makerShadow, makerWhite from '../../common/colors.css';
+
 .preview {
   flex-basis: 50%;
-  height: 100%;
+  background-color: makerWhite;
+}
+
+.title {
+  width: 100%;
   text-align: center;
-  background-color: white;
+}
+
+.cards {
+  margin: 0;
+  padding-inline-start: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0.5em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards :hover {
+  box-shadow: makerShadow 0px 0px 20px 0px;
+  top: -4px;
 }

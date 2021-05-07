@@ -1,4 +1,4 @@
-@value makerOrange, makerWhite from '/src/common/colors.css';
+@value makerOrange, makerWhite from '../../common/colors.css';
 
 .wrapper {
   width: 30em;
@@ -12,7 +12,7 @@
   transform: translate(-50%, -50%);
   box-shadow: 0 0 30px rgba(46, 46, 46, .8);
   border-radius: 10px;
-  background-color: #fff;
+  background-color: makerWhite;
 }
 
 .loginbox {
@@ -24,9 +24,9 @@
 .method {
   display: block;
   width: 80%;
-  border: 1px solid rgb(232, 73, 10);
+  border: 1px solid makerOrange;
   padding: 14px;
-  color: rgb(232, 73, 10);
+  color: makerOrange;
   border-radius: 30px;
   font-weight: bold;
   font-size: 20px;
@@ -35,7 +35,7 @@
 }
 
 .method:hover {
-  box-shadow: rgb(232, 73, 10) 0px 0px 0px 1px;
+  box-shadow: makerOrange 0px 0px 0px 1px;
 }
 
 /*.method {*/

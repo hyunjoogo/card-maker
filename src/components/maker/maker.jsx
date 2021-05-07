@@ -1,12 +1,16 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './maker.module.css';
 import Header from "../header/header";
 import Footer from "../footer/footer";
 import {useHistory} from "react-router-dom";
 import Editor from "../editer/editor";
 import Preview from "../preview/preview";
+import {contents} from "../card-contents";
 
 const Maker = ({authService}) => {
+  const [cards, setCards] = useState(contents);
+  const [mode, setMode] = useState(false);
+
   const history = useHistory()
   const onLogout = () => {
     authService.logout();
@@ -20,10 +24,10 @@ const Maker = ({authService}) => {
   })
   return (
     <section className={styles.maker}>
-      <Header onLogout={onLogout}/>
+      <Header onLogout={onLogout} mode={mode}/>
       <div className={styles.container}>
-        <Editor/>
-        <Preview/>
+        <Editor cards={cards}/>
+        <Preview cards={cards}/>
       </div>
       <Footer/>
     </section>

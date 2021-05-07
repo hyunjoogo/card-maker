@@ -1,15 +1,19 @@
 import styles from "./header.module.css";
+import Toggle from "../toggle/toggle";
 
-const Header = ({onLogout}) => {
+const Header = ({onLogout, mode}) => {
   return (
-    <div className={styles.title}>
+    <div className={styles.header}>
       {onLogout &&
       <button className={styles.logout}
               onClick={onLogout}>
         Logout
       </button>}
-      <img alt="logo" src="images/logo.png"/>
-      <h1>Business Card Maker</h1>
+      <div>
+        <img className={styles.logo} alt="logo" src="images/logo.png"/>
+        {/*<Toggle/>*/}
+      </div>
+      <h1 className={styles.title}>Business Card Maker</h1>
     </div>
   )
 }

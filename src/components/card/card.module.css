@@ -1,0 +1,71 @@
+@value makerWhite, makerOrange, makerShadow  from '../../common/colors.css';
+
+.card {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0.5em;
+  border-radius: 10px;
+  padding: 2em 0;
+  box-shadow: makerShadow 0px 0px 8px 0px;
+  transition: all 0.2s ease 0s;
+  border: 1px solid transparent;
+  max-width: 30rem;
+/*  너무 커지지 않게 최대 넓이를 지정*/
+}
+
+
+
+.avatar {
+  width: 10em;
+  height: 10em;
+  padding: 1em;
+  margin-left: 0.5em;
+  margin-right: 1em;
+  border-radius: 50%;
+}
+
+.info {
+  width: 100%;
+  text-align: left;
+}
+
+.name, .company, .deptName, .email, .message {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.name {
+  font-size: 1.2rem;
+}
+
+.company {
+  margin-bottom: 1em;
+}
+
+.company::after {
+  content: '';
+  display: block;
+  width: 90%;
+  height: 1px;
+  transform: translateY(0.4rem);
+}
+
+.company.white::after {
+  background-color: makerOrange;
+}
+
+.company.orange::after {
+  background-color: makerWhite;
+}
+
+.card.white {
+  background-color: makerWhite;
+  color: makerOrange;
+}
+
+.card.orange {
+  background-color: makerOrange;
+  color: makerWhite;
+}

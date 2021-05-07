@@ -1,9 +1,17 @@
+@value makerOrange, makerWhite from '../../common/colors.css';
+
 .footer {
   width: 100%;
-  background: #e8490a;
+  background: makerOrange;
   line-height: 60px;
-  color: #fff;
+  color: makerWhite;
   font-weight: 500;
   font-size: 20px;
   text-align: center;
+}
+
+.footer.white {
+  background: makerWhite;
+  color: makerOrange;
+  border: 1px solid makerOrange;
 }
