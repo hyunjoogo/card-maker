@@ -6,6 +6,7 @@ const DEFAULT_IMAGE = '/images/default_logo.png';
 const Card = ({card}) => {
   const {name, company, theme, deptName, email, message, fileName, fileURL} = card
   const url = fileURL || DEFAULT_IMAGE;
+
   return (
     <li className={`${styles.card} ${getStyles(theme)}`}>
       <img className={`${styles.avatar} ${getStyles(theme)}`} alt="profile photo" src={url}/>
