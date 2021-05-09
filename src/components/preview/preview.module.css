@@ -23,5 +23,4 @@
 
 .cards :hover {
   box-shadow: makerShadow 0px 0px 20px 0px;
-  top: -4px;
 }

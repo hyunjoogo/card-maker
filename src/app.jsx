@@ -5,12 +5,12 @@ import Routers from "./Routers.jsx";
 import styles from './app.module.css'
 
 
-function App({authService}) {
+function App({FileInput, authService}) {
 
   return (
     <div className={styles.app}>
       <BrowserRouter>
-        <Routers authService={authService}/>
+        <Routers FileInput={FileInput} authService={authService} />
       </BrowserRouter>
     </div>
   )

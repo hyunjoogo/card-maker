@@ -7,7 +7,7 @@ import Editor from "../editer/editor";
 import Preview from "../preview/preview";
 import {contents} from "../card-contents";
 
-const Maker = ({authService}) => {
+const Maker = ({FileInput, authService}) => {
   const [cards, setCards] = useState(contents);
 
   const history = useHistory()
@@ -43,11 +43,13 @@ const Maker = ({authService}) => {
       <Header onLogout={onLogout}/>
       <div className={styles.container}>
         <Editor
+          FileInput={FileInput}
           cards={cards}
           addCard={createOrUpdateCard}
           updateCard={createOrUpdateCard}
-          deleteCard={deleteCard}/>
-        <Preview cards={cards}/>
+          deleteCard={deleteCard}
+          />
+        <Preview FileInput={FileInput} cards={cards}/>
       </div>
       <Footer/>
     </section>

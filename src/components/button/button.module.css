@@ -14,5 +14,5 @@
 }
 
 .button:hover {
-  box-shadow: makerOrange 0px 0px 0px 1px;
+  box-shadow: makerOrange 0px 0px 10px 0px;
 }

@@ -3,11 +3,9 @@ import {Route, Switch, useLocation} from "react-router-dom";
 import Login from "./components/login/login";
 import Maker from "./components/maker/maker";
 
-function Routers({authService}) {
+function Routers({FileInput, authService}) {
   const location = useLocation();
-
   const timeout = { enter: 800, exit: 400 };
-
   return (
     <TransitionGroup className="transition-group">
       <CSSTransition
@@ -23,7 +21,7 @@ function Routers({authService}) {
               <Login authService={authService}/>
             </Route>
             <Route path="/maker">
-              <Maker authService={authService}/>
+              <Maker FileInput={FileInput} authService={authService} />
             </Route>
             {/*<Route path="/maker">*/}
             {/*  <Maker authService={authService}/>*/}

@@ -3,7 +3,7 @@ import styles from './editor.module.css';
 import CardEditForm from "../card_edit_form/card_edit_form";
 import CardAddForm from "../card_add_form/card_add_form";
 
-const Editor = ({cards, addCard, deleteCard, updateCard}) => {
+const Editor = ({FileInput, cards, addCard, deleteCard, updateCard}) => {
   // Object.keys(obj) – 객체의 키만 담은 배열을 반환합니다.
   // Object.values(obj) – 객체의 값만 담은 배열을 반환합니다.
   // Object.entries(obj) – [키, 값] 쌍을 담은 배열을 반환합니다.
@@ -18,10 +18,11 @@ const Editor = ({cards, addCard, deleteCard, updateCard}) => {
       {Object.keys(cards).map((key) => (
         <CardEditForm
           key={key}
+          FileInput={FileInput}
           card={cards[key]}
           updateCard={updateCard}
           deleteCard={deleteCard}/>))}
-      <CardAddForm onAdd={addCard}/>
+      <CardAddForm FileInput={FileInput} onAdd={addCard}/>
     </section>
   )
 };
