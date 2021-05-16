@@ -32,7 +32,7 @@ const Maker = ({FileInput, authService}) => {
 
   const deleteCard = card => {
     setCards(cards => {
-      const updated = {...cards };
+      const updated = {...cards};
       delete updated[card.id];
       return updated;
     })
@@ -48,7 +48,7 @@ const Maker = ({FileInput, authService}) => {
           addCard={createOrUpdateCard}
           updateCard={createOrUpdateCard}
           deleteCard={deleteCard}
-          />
+        />
         <Preview FileInput={FileInput} cards={cards}/>
       </div>
       <Footer/>
