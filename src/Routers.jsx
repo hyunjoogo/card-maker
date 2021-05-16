@@ -2,6 +2,7 @@ import {CSSTransition, TransitionGroup} from "react-transition-group";
 import {Route, Switch, useLocation} from "react-router-dom";
 import Login from "./components/login/login";
 import Maker from "./components/maker/maker";
+import D3 from "./d3/d3";
 
 function Routers({FileInput, authService}) {
   const location = useLocation();
@@ -25,7 +26,10 @@ function Routers({FileInput, authService}) {
             </Route>
             {/*<Route path="/maker">*/}
             {/*  <Maker authService={authService}/>*/}
-            {/*</Route>*/}
+            {/*</Route>*/}]
+            <Route path="/d3">
+              <D3 />
+            </Route>
           </Switch>
         </section>
       </CSSTransition>
