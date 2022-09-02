@@ -24,17 +24,17 @@ const Login = ({authService, onLogout}) => {
     })
   });
   return (
-      <div className={styles.wrapper}>
-        <Header onLogout={onLogout}/>
-        <div className={styles.loginbox}>
-          <h1 className={styles.logintitle}>Login</h1>
-          <div className={styles.methodbox}>
-            <span className={styles.method} onClick={onLogin}>Google</span>
-            <span className={styles.method} onClick={onLogin}>Github</span>
-          </div>
+    <div className={styles.wrapper}>
+      <Header onLogout={onLogout}/>
+      <div className={styles.loginbox}>
+        <h1 className={styles.logintitle}>Login</h1>
+        <div className={styles.methodbox}>
+          <span className={styles.method} onClick={onLogin}>Google</span>
+          <span className={styles.method} onClick={onLogin}>Github</span>
         </div>
-        <Footer/>
       </div>
+      <Footer/>
+    </div>
   )
 }
 

@@ -1,6 +1,6 @@
 // 업로드 기능있는 클래스
 // 클래스를 사용하는 사람에게 파일이라는 것을 받아와 업로드하고
-// 그 업로드된 파일의 URL을 전달해주는 역할
+// 그 업로드된 파일의 URL을 전달해주는 역할imageHandler()
 
 class ImageUploader {
   // why async??
